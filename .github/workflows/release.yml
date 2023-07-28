@@ -20,17 +20,12 @@ jobs:
 
       - name: releaser
         run: |
-          files_changed="$(git show --pretty="" --name-only)"
-          echo $files_changed
-          charts_dirs_changed="$(echo "$files_changed" | xargs dirname | grep -o "charts/[^/]*" | sort | uniq || true)"
-          echo $charts_dirs_changed
-          num_charts_changed="$(echo "$charts_dirs_changed" | grep -c "charts" || true)"
-          echo $num_charts_changed
+          ./releaser.sh
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         env:
-          CR_TOKEN: "${{ secrets.GH_TOKEN }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_OWNER: $GITHUB_REPOSITORY_OWNER
