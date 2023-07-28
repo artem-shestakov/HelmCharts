@@ -6,4 +6,4 @@ replicas: 1
 service:
   ports: []
   type: ClusterIP
-# strategy: rollingUpdate
+strategy: rollingUpdate
