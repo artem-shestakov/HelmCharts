@@ -1,0 +1,9 @@
+config: {}
+env: []
+image:
+  tag: 9.16-20.04_beta
+replicas: 1
+service:
+  ports: []
+  type: ClusterIP
+# strategy: rollingUpdate
