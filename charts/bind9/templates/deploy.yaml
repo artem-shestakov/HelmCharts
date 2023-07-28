@@ -12,7 +12,8 @@ spec:
   selector:
     matchLabels:
       app: {{ .Release.Name }}
-  strategy: {}
+  strategy:
+    type: {{ .Values.strategy }}
   template:
     metadata:
       labels:
