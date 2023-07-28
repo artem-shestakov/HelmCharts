@@ -28,7 +28,7 @@ jobs:
           ./cr upload --owner $GITHUB_REPOSITORY_OWNER --git-repo HelmCharts --token $CR_TOKEN charts/bind9
           ./cr index --owner $GITHUB_REPOSITORY_OWNER --git-repo HelmCharts --token $CR_TOKEN --index-path . --push
         env:
-          CR_TOKEN: "${{ secrets.GH_TOKEN }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       # - name: Run chart-releaser
       #   uses: helm/chart-releaser-action@v1.5.0
