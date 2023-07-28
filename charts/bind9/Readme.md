@@ -7,6 +7,7 @@
 | replicas | The number of replicas to create | 1
 | service.ports | Ports to connect to Bind9 | 
 | service.type | Type of Kubernetes service |
+| strategy  | The deployment strategy to use to replace existing pods with new ones | "rollingUpdate"
 
 `values.yaml` example:
 ```yaml
