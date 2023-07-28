@@ -20,7 +20,7 @@ jobs:
 
       - name: releaser
         run: |
-          curl -L https://github.com/helm/chart-releaser/releases/download/v1.6.0/chart-releaser_1.6.0_linux_arm64.tar.gz > chart-releaser_1.6.0_linux_arm64.tar.gz
+          curl -L https://github.com/helm/chart-releaser/releases/download/v1.6.0/chart-releaser_1.6.0_linux_amd64.tar.gz > chart-releaser_1.6.0_linux_arm64.tar.gz
           tar -xzvf chart-releaser_1.6.0_linux_arm64.tar.gz
           ls -la
           rm -rf .cr-release-packages
