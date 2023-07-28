@@ -27,5 +27,5 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          CR_OWNER: $GITHUB_REPOSITORY_OWNER
+          CR_TOKEN: "${{ secrets.GH_TOKEN }}"
+          CR_OWNER: "${{ env.GITHUB_REPOSITORY_OWNER }}"
